@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Converter</title>
+	<style>
+div {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1,h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #80EF80;
+}
+
+
+p {
+  text-indent: 50px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: #33ff33;
+}
+
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/048/868/842/small_2x/technology-stock-animation-background-free-video.jpg');
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  background-size: cover; 
+}
+
+p {
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+  
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Binary to Decimal Converter</h1>
+        <p>Enter a binary number (only 0s and 1s):</p>
+        <input type="text" id="binaryInput" maxlength="8">
+        <button onclick="convertBinary()">Convert</button>
+        <p>Decimal equivalent: <span id="decimalOutput"></span></p>
+    </div>
+
+    <script>
+	function convertBinary() {
+    const binaryInput = document.getElementById('binaryInput').value;
+    const outputElement = document.getElementById('decimalOutput');
+
+    // Validate input (should only contain 0 or 1)
+    if (/^[01]+$/.test(binaryInput)) {
+        const decimalValue = parseInt(binaryInput, 2);
+        outputElement.textContent = decimalValue;
+    } else if (binaryInput === "") {
+        outputElement.textContent = "Please enter a binary number.";
+        outputElement.style.color = "black";
+    } else {
+        outputElement.textContent = "Invalid input. Use only 0s and 1s.";
+        outputElement.style.color = "red";
+    }
+}
+	</script>
+	
+	<img src = "https://media.geeksforgeeks.org/wp-content/uploads/20250701121026923080/binary_number_system_.webp" style="width:35%;">
+	<h2>The binary system is a base-2 numerical system that uses only two digits: 0 and 1. It's the fundamental language of digital computers, where each digit represents two possible states like off and on, on being 1 and off being 0, it also used to represent all data and instructions. Binary works similarly to the decimal system, but instead of base 10, it uses the base 2 system to both code and decode. </h2>
+</body>
+</html>
